@@ -1,0 +1,41 @@
+#lists the already present databses
+show databases;
+
+#to create database
+create database cancer_cells;
+
+#to select database
+use cancer_cells;
+
+#creates table Breast_Cancer_Cells
+CREATE TABLE IF NOT EXISTS `Breast_Cancer_Cells` (
+  `ID` bigint NOT NULL,
+  `Clump_Thickness` int NOT NULL,
+  `Uniformity_of_Cell_Size` int NOT NULL,
+  `Uniformity_of_Cell_Shape` int(3) NOT NULL,
+  `Marginal_Adhesion` int(3) NOT NULL,
+  `Single_Epithelial_Cell_Size` int(3) NOT NULL,
+  `Bare_Nuclei` int(3) NOT NULL,
+  `Bland_Chromatin` int(3) NOT NULL,
+  `Normal Nucleoli` int(3) NOT NULL,
+  `Mitoses` int(3) NOT NULL,
+  `Class` int(3) NOT NULL
+)  ;
+
+#shows the dtype of columns
+describe `Breast_Cancer_Cells`;
+
+#to insert the values in table Breast_Cancer_Cells
+INSERT INTO `Breast_Cancer_Cells` 
+(`ID`, `Clump_Thickness`,`Uniformity_of_Cell_Size`, `Uniformity_of_Cell_Shape`, `Marginal_Adhesion`, `Single_Epithelial_Cell_Size` ,`Bare_Nuclei`, `Bland_Chromatin`, `Normal Nucleoli`, `Mitoses`, `Class`) 
+VALUES
+(1,10,7,7,6,4,10,4,1,2,4),
+(2,10,7,7,6,4,10,4,1,2,4),
+(3,10,7,7,6,4,10,4,1,2,4),
+(4,10,7,7,6,4,10,4,1,2,4),
+(5,10,7,7,6,4,10,4,1,2,4);
+
+#Table can be directly populated from the CSV file using Import Wizard 
+#Right click on the table from the left pane under the tables and click on the Table Data Import Wizard and select the data file 
+
+select * from Breast_Cancer_Cells where ID in (1, 2, 3, 4, 5);
