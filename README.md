@@ -14,6 +14,10 @@ It serves the following purposes:
    
 5. **Error Handling:** It includes basic error handling to check if the specified folders or files exist and provides a message in case of any issues.
 
+The display will look as below:
+![image](https://github.com/priya-sakshi/Python-GUI/assets/32618227/819e4ba5-6397-47df-91fb-e5a4194e845e)
+
+  
 Here are some common use cases for Tkinter GUI applications like the one I've developed:
 
 1. **File Management Tool:** You can use Tkinter to build a file manager that allows users to browse, copy, move, and organize files and folders on their computer.
